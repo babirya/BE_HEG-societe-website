@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Styles/Nav_style.css">
+    <link rel="stylesheet" href="Styles/style.css">
+    <link rel="stylesheet" href="Styles/cta_Style.css">
+    <link rel="stylesheet" href="Styles/fontawesome-free-5.15.3-web/css/all.css">
+    <script src="js/script.js"></script>
+    <title>BE HEG | Contactez nous</title>
+</head>
+<body>
+    <header>
+        <a href="Accueil.html"><img class="logo" src="images/mainLogo.png" alt="BE HEG LOGO"></a>
+        <nav>
+            <ul class="nav_links">
+                <li><a href="Accueil.html">Accueil</a></li>
+                <li><a href="Accueil.html#nos-services-section">Nos Services</a></li>
+                <li><a href="Accueil.html#nos-moyens-section">Nos Moyens</a></li>
+            </ul>
+        </nav>
+        <a class="cta" href="Contactez_Nous.html"><button>Contactez nous</button></a>
+    </header>
+    <div class="cta-container">
+        <div class="contact-box">
+            <h2 class="title">Contactez nous</h2>
+            <form method="" class="form" id=form >
+                <div class="formcontrol">
+                    <input type="text" class="field" placeholder="Nom" name="name" id="name">
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <p id="eroname" class="redp"></p>
+                </div>
+            
+                <div class="formcontrol">
+                    <input type="email" class="field" placeholder="Email" name="email" id="email">
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <p id="eroemail" class="redp"></p>
+                </div>
+            
+                <div class="formcontrol">
+                    <input type="text" class="field" placeholder="Sujet" name="subject" id="subject">
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <p id="erosub" class="redp"></p>
+                </div>
+            
+                <div class="formcontrol2">
+                    <textarea class="field area" placeholder="Message" name="message" id="message"></textarea>
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <p id="erotext" class="redp"></p>
+                </div>
+            
+                <input type="button" value="envoyer" class="btn" onclick="val()"/>
+            </form>
+            
+        </div>
+    </div> 
+
+    <script> 
+    
+//     function checkInputs1(){ 
+
+//       var name = document.getElementById("name"); 
+//       var email = document.getElementById("email"); 
+//       var subject= document.getElementById("subject");  
+//       var textarea =document.getElementById("message");  
+
+//       /// for erorr 
+//        var eroname= document.getElementById("eroename"); 
+//       var eroemail =document.getElementById("eroemail"); 
+//       var erosub =document.getElementById("erosub"); 
+//       var erotext =document.getElementById("erotext"); 
+//   //  name 
+
+//       if(name.value=="")
+//       { 
+
+//         document.getElementById("eroname").innerHTML="entrer votre  nom s'ill vous plait"; 
+//         return; 
+//       } 
+
+//       var regname=/^[A-Z]$/g ;
+//       if(regname.test(name.value)==false) 
+//       {
+//         eroname.innerHTML="s'ill vous plait saisie un correct nom ";    
+//       } 
+
+//       // var email  
+
+//     //   if(email.value=="")
+//     //   { 
+
+//     //    eroemail.innerHTML="entrer votre  email s'ill vous plait"; 
+//     //     return; 
+//     //   } 
+
+//     //   var regemail=/^(\w{6,})@([A-Za-z]{4,6}).([A-Za-z]{2,5})$/g ;
+//     //   if(regemail.test(email.value)==false) 
+//     //   {
+//     //    eroemail.innerHTML="s'ill vous plait saisie un correct email";    
+//     //   } 
+
+//     // } 
+
+//     // var subject  
+// //     if(subject.value=="")
+// //       { 
+
+// //    document.getElementById("erosub").innerHTML="entrer votre subject subject s'ill vous plait"; 
+       
+// //       }  
+
+//     //   // text area 
+//     //   if(textarea.value=="")
+//     //   { 
+
+//     //  erotext.innerHTML=" entrer votre message s'ill vous plait"; 
+       
+//     //    
+//  }   
+
+ function val(){ 
+
+    var name = document.getElementById("name"); 
+      var email = document.getElementById("email"); 
+      var subject= document.getElementById("subject");  
+      var textarea =document.getElementById("message");  
+
+      /// for erorr 
+       var eroname= document.getElementById("eroename"); 
+      var eroemail =document.getElementById("eroemail"); 
+      var erosub =document.getElementById("erosub"); 
+      var erotext =document.getElementById("erotext"); 
+  //  name 
+
+      if(name.value=="")
+      { 
+
+        document.getElementById("eroname").innerHTML="entrer votre  nom s'ill vous plait"; 
+        return; 
+      } 
+
+     var reg = /^[a-zA-Z]{3,}$/g;
+     if(reg.test(name.value)==false) 
+     { 
+        document.getElementById("eroname").innerHTML="entrer un valid nom ";
+     }
+
+    
+     // email 
+     if(email.value=="")
+      { 
+
+        document.getElementById("eroemail").innerHTML="entrer votre  email s'ill vous plait"; 
+        return; 
+      } 
+
+     var regemail = /^(\w{6})(\w*)@([a-zA-Z]{4,8}).([a-zA-Z]{3,4})$/g;
+     if(regemail.test(email.value)==false) 
+     { 
+        document.getElementById("eroemail").innerHTML="entrer un valid email ";
+     }
+
+   // subject  
+   if(subject.value=="")
+      { 
+
+        document.getElementById("erosub").innerHTML="entrer votre  sujet s'ill vous plait"; 
+        return; 
+      } 
+
+
+   // text  
+   if(textarea.value=="")
+      { 
+
+        document.getElementById("erotext").innerHTML="entrer votre  message s'ill vous plait"; 
+      
+      } 
+
+
+ }
+
+    
+    </script>
+</body>
+</html>
